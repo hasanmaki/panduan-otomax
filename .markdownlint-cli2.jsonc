@@ -1,0 +1,8 @@
+{
+    "ignores": [
+        "materi/**",
+        "docs/**",
+        "node_modules/**",
+        ".venv/**"
+    ]
+}
