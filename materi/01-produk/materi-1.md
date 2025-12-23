@@ -3,11 +3,14 @@ marp: true
 theme: uncover
 size: 16:9
 paginate: true
+author: Hasan Maki
+
+footer: hasan maki-mkitdev
 ---
 
-# Welcome to Marp
+# Otomax Use Case
 
-### Your Journey to Beautiful Presentations Starts Here
+### Classroom Presentation with Marp
 
 ---
 
