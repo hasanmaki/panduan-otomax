@@ -1,1 +1,81 @@
-site_name: My Docs
+# mkdocs serve --livereload
+site_name: Otomax User Guide
+site_author: Hasan Maki
+site_description: Dokumentasi penggunaan Otomax,
+site_url: https://example.com/
+plugins:
+  - offline
+  - mkdocstrings:
+      enabled: !ENV [MKDOCSTRINGS_ENABLED, true]
+      custom_templates: null # ini untuk custom templates tampilan documentasi default
+      default_handler: python
+      locale: id
+      handlers:
+        python:
+          options:
+            show_root_toc_entry: false
+            show_source: true
+            show_signature_annotations: true
+            docstring_style: google
+
+nav:
+  - Beranda: index.md
+  - Panduan:
+      - Admonition: admonition.md
+      - Diagram: diagram.md
+  - Referensi API:
+      - Main (Demo Use Case):
+          - Dokumentasi Main: main.md
+
+theme:
+  name: material
+  font:
+    text: Roboto
+    code: JetBrains Mono
+
+  logo: assets/images/logo_1.png
+  favicon: assets/images/favicon_1.ico
+  features:
+    - search.highlight
+    - search.suggest
+    - content.code.annotate
+    - navigation.footer
+  palette:
+    # Dark mode colors
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: dark mode
+      primary: light blue
+      accent: deep orange
+    # Light mode colors
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: light mode
+      primary: light blue
+      accent: deep orange
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - admonition
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/hasanmaki
+
+copyright: © 2025 Hasan Maki. All rights reserved.
