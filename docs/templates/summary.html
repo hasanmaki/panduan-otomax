@@ -1,0 +1,9 @@
+<div class="glossary-summary-grid">
+  {% for term in terms %}
+    <article class="glossary-card">
+      <h3 class="glossary-card-term">{{ term }}</h3>
+      <div class="glossary-card-def">{% for entry in glossary.get(section, term, 'defs') %}{{ entry.definition|striptags|truncate(140) }}{% if not loop.last %} {% endif %}{% endfor %}</div>
+      <div class="glossary-card-meta">{% set refs = glossary.get(section, term, 'refs') %}{% if refs|length > 0 %}<a class="glossary-card-refs" href="{{ root }}{{ refs[0].page.url }}#{{ refs[0].target }}">See {{ refs|length }} references</a>{% endif %}</div>
+    </article>
+  {% endfor %}
+</div>

@@ -1,0 +1,33 @@
+/* Glossary: minimalist styling */
+:root{
+  --gloss-accent: #0ea5a4; /* teal */
+  --gloss-muted: #6b7280; /* gray-500 */
+  --gloss-bg: #ffffff;
+  --gloss-border: #e6e6e6;
+  --gloss-radius: 6px;
+}
+
+.glossary-term {
+  border-bottom: 1px dashed var(--gloss-accent);
+  cursor: help;
+}
+
+.mkdocs-ezglossary-link.minimalist {
+  color: var(--gloss-accent);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mkdocs-ezglossary-link.minimalist .gloss-link-icon{opacity:0.7}
+
+.glossary-card{background:var(--gloss-bg);border:1px solid var(--gloss-border);border-radius:var(--gloss-radius);padding:12px;margin:8px;box-shadow:0 1px 3px rgba(0,0,0,0.04);}
+.glossary-summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:12px 0}
+.glossary-card-term{font-size:1rem;margin:0 0 6px 0;color:var(--gloss-accent)}
+.glossary-card-def{color:var(--gloss-muted);font-size:0.95rem;line-height:1.3}
+.glossary-card-meta{margin-top:8px}
+.gloss-ref-badge{display:inline-block;padding:2px 6px;border-radius:999px;background:#f1f5f9;color:var(--gloss-muted);font-size:0.85rem;margin-right:4px}
+
+/* small responsive tweaks */
+@media (max-width:520px){.glossary-summary-grid{grid-template-columns:1fr}}

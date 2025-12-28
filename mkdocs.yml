@@ -11,6 +11,7 @@ plugins:
       ignore_case: true # case-insensitive matching (opsional)
       tooltip: full # tooltip on hover (none|short|full)
       markdown_links: true # aktifkan [text](section:term) style links (opsional)
+      templates: docs/templates
   - mkdocstrings:
       enabled: !ENV [MKDOCSTRINGS_ENABLED, true]
       custom_templates: null # ini untuk custom templates tampilan documentasi default
@@ -27,8 +28,6 @@ plugins:
 nav:
   - Beranda: index.md
   - Glossarium: glossary.md
-  - Panduan Glossarium: using_glossary.md
-
 theme:
   name: material
   font:

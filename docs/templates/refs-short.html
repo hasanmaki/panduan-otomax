@@ -1,0 +1,7 @@
+<div class="mkdocs-ezglossary-refs short">
+  {% set counter = 0 %}
+  {% for entry in entries %}
+    {% set counter = counter + 1 %}
+    <a class="gloss-ref-badge" title="{{ entry.page.title }}" href="{{ root }}{{ entry.page.url }}#{{ entry.target }}">[{{ counter }}]</a>
+  {% endfor %}
+</div>
