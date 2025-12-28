@@ -35,23 +35,23 @@ title: Glossarium Otomax
 
 ## Definisi
 
-<dl>
-  <dt>otomax:parsing</dt>
-  <dd>Proses Otomax membaca balasan dari server provider (misal: `"SUCESS 12345"`) untuk mengubah status transaksi dari *Proses* menjadi *Sukses* atau *Gagal*.</dd>
-</dl>
+*`otomax:parsing`*
+:   Proses Otomax membaca balasan dari server provider (misal: `"SUCESS 12345"`) untuk mengubah status transaksi dari *Proses* menjadi *Sukses* atau *Gagal*.
 
-<dl>
-  <dt>otomax:deposit</dt>
-  <dd>Dana yang ditransfer ke rekening BNI Otomax (bukan ke provider). Harus diproses di menu `Deposit` agar masuk ke saldo sistem.</dd>
-  <dt>otomax:saldo_deposit</dt>
-  <dd>Saldo di dalam Otomax — uang yang siap dipakai untuk beli pulsa/tagihan.</dd>
-  <dt>otomax:saldo_provider</dt>
-  <dd>Kredit di server provider (Telkomsel/XL/PLN). Diisi otomatis saat transaksi sukses.</dd>
-  <dt>otomax:komisi_tunda</dt>
-  <dd>Komisi penjualan yang belum diambil reseller. Masih tersimpan di database sampai diklaim.</dd>
-  <dt>otomax:grup_reseller</dt>
-  <dd>Kelompok reseller dengan harga jual & komisi yang sama. Salah pilih grup = salah harga!</dd>
-  <dt>otomax:voucher_fisik</dt>
-  <dd>Struk cetak berisi kode isi ulang (nomor seri) — untuk dijual ke agen atau pelanggan langsung.</dd>
-</dl>
-:::
+*`otomax:deposit`*
+:   Dana yang ditransfer ke rekening BNI Otomax (bukan ke provider). Harus diproses di menu `Deposit` agar masuk ke saldo sistem.
+
+*`otomax:saldo_deposit`*
+:   Saldo di dalam Otomax — uang yang siap dipakai untuk beli pulsa/tagihan.
+
+*`otomax:saldo_provider`*
+:   Kredit di server provider (Telkomsel/XL/PLN). Diisi otomatis saat transaksi sukses.
+
+*`otomax:komisi_tunda`*
+:   Komisi penjualan yang belum diambil reseller. Masih tersimpan di database sampai diklaim.
+
+*`otomax:grup_reseller`*
+:   Kelompok reseller dengan harga jual & komisi yang sama. Salah pilih grup = salah harga!
+
+*`otomax:voucher_fisik`*
+:   Struk cetak berisi kode isi ulang (nomor seri) — untuk dijual ke agen atau pelanggan langsung.

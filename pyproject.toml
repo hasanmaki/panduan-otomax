@@ -8,6 +8,7 @@ dependencies = [
     "fastapi[standard]>=0.127.1",
     "locust>=2.42.6",
     "loguru-config>=0.1.0",
+    "mkdocs-ezglossary-plugin>=2.1.0",
     "mkdocs-material>=9.7.1",
     "mkdocstrings[python]>=1.0.0",
     "pre-commit>=4.5.0",
