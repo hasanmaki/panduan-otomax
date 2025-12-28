@@ -5,6 +5,12 @@ site_description: Dokumentasi penggunaan Otomax,
 site_url: https://example.com/
 plugins:
   - offline
+  - search
+  - ezglossary:
+      inline_refs: short # tampilkan referensi di definisi (none|short|list)
+      ignore_case: true # case-insensitive matching (opsional)
+      tooltip: full # tooltip on hover (none|short|full)
+      markdown_links: true # aktifkan [text](section:term) style links (opsional)
   - mkdocstrings:
       enabled: !ENV [MKDOCSTRINGS_ENABLED, true]
       custom_templates: null # ini untuk custom templates tampilan documentasi default
@@ -20,12 +26,7 @@ plugins:
 
 nav:
   - Beranda: index.md
-  - Panduan:
-      - Admonition: admonition.md
-      - Diagram: diagram.md
-  - Referensi API:
-      - Main (Demo Use Case):
-          - Dokumentasi Main: main.md
+  - Kosakata: glossary.md
 
 theme:
   name: material
@@ -77,5 +78,7 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/hasanmaki
+extra_css:
+  - extra.css
 
 copyright: © 2025 Hasan Maki. All rights reserved.
